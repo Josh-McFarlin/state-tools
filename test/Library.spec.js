@@ -8,7 +8,7 @@ const { expect } = chai;
 
 describe('Library', () => {
     it('should get the library version', () => {
-        expect(Library.version).to.eql('0.1.0');
+        expect(Library.version).to.eql('0.1.1');
     });
 
     it('should get the library name', () => {
