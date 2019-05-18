@@ -26,7 +26,7 @@ export default (commandLineArgs) => {
             output: {
                 banner,
                 name: pkg.name,
-                file: `dist/${pkg.name}.umd.js`,
+                file: 'dist/index.umd.js',
                 format: 'umd'
             },
             plugins: [
@@ -52,12 +52,12 @@ export default (commandLineArgs) => {
             output: [
                 {
                     banner,
-                    file: `dist/${pkg.name}.cjs.js`,
+                    file: 'dist/index.cjs.js',
                     format: 'cjs'
                 },
                 {
                     banner,
-                    file: `dist/${pkg.name}.esm.js`,
+                    file: 'dist/index.esm.js',
                     format: 'es'
                 }
             ],
@@ -84,7 +84,7 @@ export default (commandLineArgs) => {
             output: {
                 banner,
                 name: pkg.name,
-                file: `dist/${pkg.name}.umd.min.js`,
+                file: 'dist/index.umd.min.js',
                 format: 'umd'
             },
             plugins: [
@@ -115,12 +115,12 @@ export default (commandLineArgs) => {
             output: [
                 {
                     banner,
-                    file: `dist/${pkg.name}.cjs.min.js`,
+                    file: 'dist/index.cjs.min.js',
                     format: 'cjs'
                 },
                 {
                     banner,
-                    file: `dist/${pkg.name}.esm.js`,
+                    file: 'dist/index.esm.min.js',
                     format: 'es'
                 }
             ],
