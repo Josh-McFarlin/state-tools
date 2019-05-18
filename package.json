@@ -1,7 +1,7 @@
 {
   "name": "state-tools",
   "description": "A library to help easily modify React state in one line.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Josh McFarlin",
   "license": "MIT",
   "private": false,
