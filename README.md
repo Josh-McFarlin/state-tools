@@ -46,7 +46,7 @@ this.state = {
 };
 
 this.setState(prev => ({
-    someArray: preserveState(removeIndex, prev.someArray, 100))
+    someArray: preserveState(removeAtIndex, prev.someArray, 100)
 }));
 
 // Result
