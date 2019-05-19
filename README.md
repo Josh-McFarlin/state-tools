@@ -17,21 +17,44 @@ This library is a set of functions to make it easier to modify React's state.
 Each function clones the provided variable (so React state is not modified directly)
 and returns the modified clone (so the function can be used inline).
 
-## Example
+## Examples
 ```javascript
+import { removeAtIndex } from 'state-tools';
+
 // Initial
 this.state = {
     someArray: [1, 2, 3, 4, 5]
 };
 
 this.setState(prev => ({
-    someArray: stateTools.removeIndex(prev.someArray, 1)
+    someArray: removeAtIndex(prev.someArray, 1)
 }));
 
 // Result
 // this.state.someArray == [1, 3, 4, 5]
 ```
 
-## Documentation
-Until the first version has been released with official documentation, you can view the
-complete list of functions and JSDocs in [src/functions](src/array).
+In some use cases, it might be preferable to ignore an error instead of crashing React.
+For this use case, there is an utility function called `preserveState`, that can wrap
+any function and return the original state if the function fails.
+```javascript
+import { preserveState, removeAtIndex } from 'state-tools';
+
+// Initial
+this.state = {
+    someArray: [1, 2, 3, 4, 5]
+};
+
+this.setState(prev => ({
+    someArray: preserveState(removeIndex, prev.someArray, 100))
+}));
+
+// Result
+// this.state.someArray == [1, 2, 3, 4, 5]
+```
+
+## Function Documentation
+state-tools documentation can be accessed [here](https://josh-mcfarlin.github.io/state-tools/api/).
+
+You can also view the complete list of functions and JSDocs on
+[GitHub](https://github.com/Josh-McFarlin/state-tools/tree/master/src).
