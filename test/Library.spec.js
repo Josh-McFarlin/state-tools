@@ -8,6 +8,6 @@ const { expect } = chai;
 
 describe('Library', () => {
     it('should get the library version', () => {
-        expect(Library.version).to.eql('0.1.3');
+        expect(Library.version).to.eql('0.2.0');
     });
 });

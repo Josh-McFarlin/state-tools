@@ -1,10 +1,10 @@
 import { version } from '../package.json';
-import addAtIndex from './functions/addAtIndex';
-import deleteProperty from './functions/deleteProperty';
-import preserveState from './functions/preserveState';
-import push from './functions/push';
-import removeAtIndex from './functions/removeAtIndex';
-import set from './functions/set';
+import addAtIndex from './array/addAtIndex';
+import deleteProperty from './object/deleteProperty';
+import preserveState from './util/preserveState';
+import push from './array/push';
+import removeAtIndex from './array/removeAtIndex';
+import set from './object/set';
 
 
 export default {

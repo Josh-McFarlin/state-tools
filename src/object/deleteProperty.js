@@ -1,8 +1,9 @@
 /**
  * Removes the provided property from `obj`.
  *
+ * @function
+ * @module
  * @since 0.1.0
- * @category Object
  * @param {Object} obj The object to modify.
  * @param {String} property The property to remove.
  * @returns {Object} Returns the modified object.
@@ -11,8 +12,8 @@
  * @throws {Error} If the provided property is not in the object.
  * @example
  *
- * deleteProperty({ a: 1, b: 2 }, 'a')
- * // => { b: 2 }
+ *     deleteProperty({ a: 1, b: 2 }, 'a')
+ *     // => { b: 2 }
  */
 export default function (obj, property) {
     const firstIsObject = obj instanceof Object && !(obj instanceof Array);

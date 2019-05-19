@@ -1,8 +1,9 @@
 /**
- * Sets a property in `obj`.
+ * Sets a property in `obj` using a simple or deep `path`.
  *
+ * @function
+ * @module
  * @since 0.1.3
- * @category Object
  * @param {Object} obj The object to modify.
  * @param {String} path The name or path of the property to add.
  * @param {*} value The value of the property to add.
@@ -10,8 +11,12 @@
  * @throws {TypeError} If the first parameter is not an array.
  * @example
  *
- * set({ a: 1 }, 'b', 2)
- * // => { a: 1, b: 2 }
+ *     set({ a: 1 }, 'b', 2)
+ *     // => { a: 1, b: 2 }
+ * @example
+ *
+ *     set({}, 'a.b[2].c', 123)
+ *     // => { a: { b: [ undefined, undefined, { c: 123 } ] }}
  */
 export default function (obj, path, value) {
     const firstIsObject = obj instanceof Object && !(obj instanceof Array);

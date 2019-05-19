@@ -27,12 +27,21 @@ describe('addAtIndex', () => {
         expect(() => Library.addAtIndex(array, 1, 5)).to.throw(Error, 'Index cannot be greater than the length of the array!');
     });
 
-    it('should correctly add item to array at index', () => {
+    it('should correctly add one item to array at index', () => {
         const array = [1, 2, 3];
 
         const newArray = Library.addAtIndex(array, 1, 5);
 
         expect(newArray).to.have.lengthOf(4);
         expect(newArray).to.eql([1, 5, 2, 3]);
+    });
+
+    it('should correctly add several items to array at index', () => {
+        const array = [1, 2, 3];
+
+        const newArray = Library.addAtIndex(array, 1, 4, 5, 6);
+
+        expect(newArray).to.have.lengthOf(6);
+        expect(newArray).to.eql([1, 4, 5, 6, 2, 3]);
     });
 });

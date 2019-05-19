@@ -34,4 +34,4 @@ this.setState(prev => ({
 
 ## Documentation
 Until the first version has been released with official documentation, you can view the
-complete list of functions and JSDocs in [src/functions](./src/functions).
+complete list of functions and JSDocs in [src/functions](src/array).

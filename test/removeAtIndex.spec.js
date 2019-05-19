@@ -27,12 +27,21 @@ describe('removeAtIndex', () => {
         expect(() => Library.removeAtIndex(array, 0)).to.throw(Error, 'Index cannot be greater than or equal to the length of the array!');
     });
 
-    it('should correctly remove index from array', () => {
+    it('should correctly remove one item from array', () => {
         const array = [1, 2, 3];
 
-        const newArray = Library.removeAtIndex(array, 0);
+        const newArray = Library.removeAtIndex(array, 1);
 
         expect(newArray).to.have.lengthOf(2);
-        expect(newArray).to.eql([2, 3]);
+        expect(newArray).to.eql([1, 3]);
+    });
+
+    it('should correctly remove several items from array', () => {
+        const array = [1, 2, 3];
+
+        const newArray = Library.removeAtIndex(array, 1, 2);
+
+        expect(newArray).to.have.lengthOf(1);
+        expect(newArray).to.eql([1]);
     });
 });

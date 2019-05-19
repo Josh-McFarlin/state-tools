@@ -22,7 +22,7 @@ describe('push', () => {
         expect(newArray).to.eql([1, 2, 3, 4]);
     });
 
-    it('should correctly add more than one item to array', () => {
+    it('should correctly add several items to array', () => {
         const array = [1, 2, 3];
 
         const newArray = Library.push(array, 4, 5, 6);
