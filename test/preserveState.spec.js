@@ -19,7 +19,7 @@ describe('preserveState', () => {
     it('should preserve initial state if parameters are incorrect', () => {
         const array = [1, 2, 3, 4, 5];
 
-        const newArray = Library.preserveState(Library.removeIndex, array, 'willError');
+        const newArray = Library.preserveState(Library.removeAtIndex, array, 'willError');
 
         expect(newArray).to.have.lengthOf(array.length);
         expect(newArray).to.eql(array);
