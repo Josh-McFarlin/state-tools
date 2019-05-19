@@ -14,7 +14,7 @@
  * deleteProperty({ a: 1, b: 2 }, 'a')
  * // => { b: 2 }
  */
-export default (obj, property) => {
+export default function (obj, property) {
     const firstIsObject = obj instanceof Object && !(obj instanceof Array);
 
     if (firstIsObject && typeof property === 'string') {
@@ -36,4 +36,4 @@ export default (obj, property) => {
     } else {
         throw new TypeError('The second parameter must be a String!');
     }
-};
+}

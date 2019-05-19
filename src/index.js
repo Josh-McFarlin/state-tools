@@ -1,9 +1,10 @@
-import { name, version } from '../package.json';
-import functions from './functions';
+import { version } from '../package.json';
+import deleteProperty from './functions/deleteProperty';
+import removeIndex from './functions/removeIndex';
 
 
 export default {
-    name: () => name,
     version,
-    ...functions
+    deleteProperty,
+    removeIndex
 };

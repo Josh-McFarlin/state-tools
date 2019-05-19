@@ -14,7 +14,7 @@
  * removeIndex([1, 2, 3], 1)
  * // => [1, 3]
  */
-export default (array, index) => {
+export default function removeIndex(array, index) {
     if (Array.isArray(array) && Number.isInteger(index)) {
         const arrayCopy = [...array];
 
@@ -34,4 +34,4 @@ export default (array, index) => {
     } else {
         throw new TypeError('The second parameter must be an Integer!');
     }
-};
+}
